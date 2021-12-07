@@ -26,6 +26,11 @@ const PORT = process.env.PORT;
 
 app.use(express.json());
 
+app.get("/",(request,response)=>{
+
+    response.send("hai welcome")
+
+});
 app.get("/questions",async (request,response)=>{
 
     const result = await client.db("B28wd").collection("questions").find({}).toArray()
