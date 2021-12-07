@@ -37,7 +37,7 @@ app.post("/questions",async (request,response)=>{
     const data = request.body;
     const result = await client.db("B28wd").collection("questions").insertMany(data)
     response.send(result);
-     d
+     
 });
 
 
