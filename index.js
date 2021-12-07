@@ -2,6 +2,8 @@
 import express from "express";
 const app = express();
 import { MongoClient } from 'mongodb';
+import dotenv from "dotenv";
+dotenv.config();
 
 const MONGO_URL = "mongodb://localhost";
 
@@ -20,7 +22,7 @@ const Questions=[{
 	"Answer": "hai welcome"
 }]
 
-const PORT = 7000;
+const PORT = process.env.PORT;
 
 app.use(express.json());
 
